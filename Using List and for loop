@@ -1,0 +1,25 @@
+# The size of the code is samll compared to the other one and for loop has been used to cut down the sixwe of the loop.
+# List = lis consist of all the questions; List2 = lis1 consist of correct answers, and the List3 = lis 2 consist of all the prize money.  
+
+
+
+lis = ['Question 1: What is the capital of India? \n 1. New Delhi \n 2. Mumbai \n 3. Kolkata \n 4. Chennai', 'Question 2: What is the capital of USA? \n 1. Washington DC \n 2. New York \n 3. San Francisco \n 4. Chicago', 'Question 3: Which city was recoganised as the home for Levis Jeans? \n 1. New York \n 2. London \n 3. Pairs \n 4. San Francisco', 'Question 4: What is G stands for in Parle G biscuit? \n 1. Gold \n 2. Grapes \n 3. Glucos\n 4. e Garlic', 'Question 5: What is a group of flamingoes called? \n 1. Flock \n 2. Herd \n 3. Brood \n 4. Flamboyance', 'Question 6: What is the name of the longest river in the world? \n 1. Amazon \n 2. Nile \n 3. Yangtze \n 4. Mississippi', 'Question 7: What is the color of the black box ? \n 1. Black \n 2. White \n 3. Red \n 4. Orange', 'Question 8: What is the name of the largest ocean in the world? \n 1. Atlantic \n 2. Pacific \n 3. Indian \n 4. Arctic', 'Question 9: What is the name of the largest country in the world by area? \n 1. USA \n 2. China \n 3. Russia \n 4. India']
+lis1 = [1, 1, 4, 3, 4, 2, 4, 2, 3]
+lis2 = [4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 1024000]
+
+
+money = 0
+for i,k,j in zip(lis,lis1, lis2):
+    print(f'The amount for this question is ${j} and the question is: \n {i} \n')
+    answer = int(input('Enter the correct option here: '))
+        
+    if answer == k:
+        print('Yay! that is correct answer. \n')
+    else:
+        print('This answer is incorrect.')
+        print(f'The amount of money you won ${j} \n')
+        break
+            
+    print(f'Congratulations! you won: ${j} \n')
+    money = money + 1
+print(f'Number of questions answered {money}')
